@@ -1,0 +1,14 @@
+Instruction,Description (Action at Node A)
+"LOAD_REG R_TOKEN_STATUS, #01",Token status: Load 1 (PRIVILEGE message) into a register.
+"LOAD_REG R_DEST_NODE, #B_ID","Destination: Load Node B's ID (e.g., 0110) into a register."
+"SEND_MSG R_TOKEN_STATUS, R_DEST_NODE",Send: Transmit the token status to the destination node.
+UPDATE_HOLDER #B_ID,Local State: Update Node A's HOLDER variable to point to Node B.
+CLEAR_Q,Cleanup: Clear Node A's REQUEST_Q head (since that request is now satisfied).
+
+OpCode,Dest/Reg,Source/Value,Description
+00000100,00000001 (R1),0000000000000001 (1),"LOAD_REG R1, #1 (Token Status)"
+00000100,00000010 (R2),0000000000000110 (B_ID),"LOAD_REG R2, #B_ID (Destination)"
+00010010,00000001 (R1),00000010 (R2),SEND_MSG R1 to R2
+01001101,00000010 (R2),0000000000000000 (NOP),UPDATE_HOLDER R2
+11000011,00000000 (NOP),0000000000000000 (NOP),CLEAR_Q
+
