@@ -1,0 +1,4 @@
+Table,Key Fields,Relationship
+Users,"user_id (PK), email, password_hash, name",1:Many with Projects
+Projects,"project_id (PK), user_id (FK), name, status",1:Many with Tasks
+Tasks,"task_id (PK), project_id (FK), title, description, assignee_id (FK), due_date, status",Many:1 with Projects
