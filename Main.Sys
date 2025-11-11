@@ -1,0 +1,8 @@
+// Define thresholds and hardware pins
+#define BATTERY_LOW_THRESHOLD_MV    3300  // 3.3V
+#define BATTERY_CRITICAL_MV         3000  // 3.0V
+
+// Hardware mapping (I/O Pins)
+#define PIN_ADC_BATTERY_VOLTAGE     A0    // Analog Input Pin for Battery reading
+#define PIN_STATUS_ADAPTER_DETECT   D1    // Digital Input Pin: HIGH when adapter is plugged in
+#define PIN_CONTROL_POWER_SWITCH    D2    // Digital Output Pin: Controls a relay/FET to switch power source
