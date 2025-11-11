@@ -1,0 +1,11 @@
+Instruction Type,Binary Opcode (First 8 bits),Operands (Example),Full 32-bit Binary Stream (Conceptual)
+MOV (Immediate),00100000,"R1 (0001), 5 (00000101...)",00100000 0001 00000101 00000000
+MOV (Immediate),00100000,"R2 (0010), 3 (00000011...)",00100000 0010 00000011 00000000
+ADD (Register),00000001,"R3 (0011), R1 (0001), R2 (0010)",00000001 0011 0001 0010 00000000
+
+Line,Instruction,Description
+1,"MOV R1, #5",Move the immediate value 5 into Register 1.
+2,"MOV R2, #3",Move the immediate value 3 into Register 2.
+3,"ADD R3, R1, R2","Add the contents of R1 and R2, store the result in R3."
+
+001000000001000001010000000000100000001000000011000000000000000100110001001000000000
