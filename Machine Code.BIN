@@ -1,0 +1,8 @@
+Field,Bits,Purpose,Binary Value
+OpCode,7 bits (31-25),Identifies the instruction type (LOAD\_IMM),0010001
+R,5 bits (24-20),Identifies the Destination Register (R5),00101
+Immediate Value,20 bits (19-0),The value to be loaded (25),0000000000011001
+
+Format,Value
+Hexadecimal,24 A0 00 19
+Binary Stream,OpCode0010001​​R500101​​Value 250000000000011001​​
